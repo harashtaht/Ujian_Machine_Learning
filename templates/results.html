@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Recommended Digimons</title>
+</head>
+<body>
+    <center>
+    <h3>Digimon Favorit yang Kamu Input</h3>
+    <img src = "{{userFave['image']}}" alt="DigiFavorit">
+    <p>
+        Nama : {{userFave['digimon'].capitalize()}} |
+        Stage : {{userFave['stage']}} |
+        Type : {{userFave['type']}} |
+        Attribute : {{userFave['attribute']}} |
+    </p>
+    <br>
+    <br>
+    <h3>Rekomendasi Untukmu : </h3>
+    <ul>
+        {% for item in recForUser%}
+        <img src = "{{item['image']}}" alt="Digimon Appearance">
+        <p>
+            Nama : {{item['name'].capitalize()}} |
+            Stage : {{item['stage']}} |
+            Type : {{item['type']}} | 
+            Attribute : {{item['attribute']}} |
+        </p>
+        {% endfor %}
+    </ul>
+<br><br><br>
+<br><br>
+    <p>Mau Input Digimon Lain?</p>
+    <form action="http://localhost:5000/">
+        <button type="submit">Back to Home</button>
+    </form>
+
+</center>
+</body>
+</html>

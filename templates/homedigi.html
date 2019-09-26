@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Digimon Find</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>    
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/25fa702987.js"></script>
+</head>
+
+<body>
+    <h5>Cari Digimon Favoritku</h5>
+    <form action='http://127.0.0.1:5000/FindRecom'
+        method= 'POST'>
+        <div class='input-field col s3'>
+            <input id='namadigi' 
+            name='namadigi' type='text'>
+            <label for='namadigi'>Masukkan Nama.. </label>
+        </div>
+       
+        <center class='row'>
+            <button class='btn waves-effect waves-light' 
+            type='submit'>
+                SUBMIT
+                &nbsp;&nbsp;
+                <i class="fas fa-hand-pointer"></i>
+            </button>
+        </center>
+    </form>
+
+</body>
+</html>
